@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Vue</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id='app'>
+      {{message}}
+      <h1>{{title}}</h1>
+      <ul>
+        <li v-for="item in items">{{item.text}}</li>
+        </ul>
+    </div>
+  </body>
+  <script src="./vue2.js"></script>
+  <script>
+    let app = new Vue({
+      el: '#app',
+      data: {
+        message: "Hello Vue!",
+        title: "陆鸿博 best",
+        item: [{
+          text: 'a'
+        },{
+          text: 'b'
+        },{
+          text: 'c'
+        },{
+          text: 'd'
+        }]
+      }
+    })
+    
+    app.title = 'bobobo'
+  </script>
+</html>
